@@ -18,9 +18,6 @@ class Dueler:
 		if(self.health < -20):
 			message += " and dies.\n \n"
 			self.continuefighting = False
-		elif(self.health > 0 and self.health < self.yieldthreshold):
-			message += " and yields.\n \n"
-			self.continuefighting = False
 		elif(damage > 45 or self.health < 0):
 			message += "  and is severely injured, maimed or killed. They are forced to surrender. \n \n"
 			roll = random.randint(1,20)
@@ -32,6 +29,9 @@ class Dueler:
 			else:
 				message+= "They die"
 			self.continuefighting = False
-		elif(damage > 20 and self.continuefighting):
+		if(damage > 20 and self.continuefighting):
 			message += " suffering a minor injury of: {} \n".format(Injury.minor_injury())
+		if(self.health > 0 and self.health < self.yieldthreshold):
+			message += " and yields.\n \n"
+			self.continuefighting = False
 		return message

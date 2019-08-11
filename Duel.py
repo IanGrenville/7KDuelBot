@@ -5,8 +5,8 @@ class Duel:
 		roundmessage = "\n \n ____ \n \n  **Round {}** \n \n \n ".format(round)
 		roll1 = dueler1.attack_roll()
 		roll2 = dueler2.attack_roll()
-		roundmessage += "**{}** Roll: {} (+{}) Health: {}\n \n".format(dueler1.name,roll1-dueler1.bonus,dueler1.bonus,dueler1.health)
-		roundmessage += "**{}** Roll: {} (+{}) Health: {}\n \n".format(dueler2.name,roll2-dueler2.bonus,dueler2.bonus,dueler2.health)
+		roundmessage += "**{}** Roll: {} ({:+}) Health: {}\n \n".format(dueler1.name,roll1-dueler1.bonus,dueler1.bonus,dueler1.health)
+		roundmessage += "**{}** Roll: {} ({:+}) Health: {}\n \n".format(dueler2.name,roll2-dueler2.bonus,dueler2.bonus,dueler2.health)
 		if(roll1 > roll2):	
 			roundmessage += dueler2.take_damage(roll1-roll2)
 			if(roll1-roll2 > 20):
