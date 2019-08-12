@@ -27,7 +27,7 @@ for comment in subreddit.stream.comments():
 			#			lastcomment = lastcomment.reply(round)
 			#		time.sleep(120)
 			#else:
-				comment.reply(duel.run(duelinfo))#Post all at once
+			comment.reply(duel.run(duelinfo))#Post all at once
 		else:
 			print("Improperly formatted duel info")
 		time.sleep(180) #We sleep for 3 minutes after each duel so we don't get screwed by rate limits. Delete this when karma is high enough.
