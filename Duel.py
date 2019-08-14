@@ -22,6 +22,7 @@ class Duel:
 		dueler2 = Dueler.Dueler(duelinfo.group(4),int(duelinfo.group(5)),int(duelinfo.group(6)))
 		battlemessage = "#Duel Between {} (Yield:{}) and {} (Yield:{}) \n \n".format(dueler1.name,dueler1.yieldthreshold,dueler2.name,dueler2.yieldthreshold)
 		battlemessage += "*I am a bot(by /u/as334). Please upvote my comments so I can respond quicker and run faster.* \n \n"
+		battlemessage += "Automod ping mods \n \n"
 		while(dueler1.continuefighting and dueler2.continuefighting):
 			battlemessage += self.run_round(dueler1,dueler2,round)
 			round += 1
