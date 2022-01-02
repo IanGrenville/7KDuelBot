@@ -1,3 +1,7 @@
+## Note:
+
+This project was originally made on my previous github account. I've forked it on my new account for better visibility.
+
 # 7KDuelBot
 Automatically runs duels for /r/SevenKingdoms
 
